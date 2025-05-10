@@ -1,6 +1,6 @@
 """
 The single-layer Transformer-like module here is learning the one-step 
-gradient descent/ascent (GDA) update for the quadratic game:
+gradient descent/ascent (GDA) update for the quadratic function:
 
     f(x, y) = 0.5 * ||x||^2 - 0.5 * ||y||^2 + x^T A y    with A=1.
 
