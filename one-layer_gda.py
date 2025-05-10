@@ -22,12 +22,6 @@ L = (1 / 2B) * sum from b = 1 to B of || ẑ₁^(b) - z₁*^(b) ||₂²
 
 This encourages P and Q to make Z + attention(Z) * diag(1, -1) match (x', y').
 
-DESCRIPTION
--------------
-A single-layer, two-token residual attention block uses learned matrices P and Q to form a quadratic dot-product score that scales a linear value projection, 
-multiplies the result by a fixed diagonal gate diag(+1,-1), and adds it back to the input, 
-creating a cubic residual map that closely imitates one-step gradient descent–ascent on the quadratic saddle game.
-
 SAMPLE OUTPUT
 ------------
 Step 0, Loss 2.07e-02
