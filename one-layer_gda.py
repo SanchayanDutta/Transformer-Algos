@@ -24,11 +24,11 @@ creating a cubic residual map that closely imitates one-step gradient descent–
 
 SAMPLE OUTPUT
 ------------
-step    0  loss 1.97e-02
-step  200  loss 6.90e-03
-step  400  loss 6.41e-03
-step  600  loss 7.30e-03
-step  800  loss 7.80e-03
+Step 0, Loss 2.07e-02
+Step 200, Loss 6.84e-03
+Step 400, Loss 7.02e-03
+Step 600, Loss 6.38e-03
+Step 800, Loss 6.59e-03
 Final Test Loss: 6.76e-03
 """
 
