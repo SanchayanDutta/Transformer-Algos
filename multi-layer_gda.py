@@ -30,6 +30,15 @@ By stacking N such layers, we effectively perform N approximate GDA steps.
      matching the (x, y) GDA update.
 
 By stacking N layers of this mechanism, we effectively perform N "approximate" GDA steps.
+
+Sample Output:
+---------------
+step    0  loss 1.669e-01
+step  800  loss 2.639e-02
+step 1600  loss 2.927e-02
+step 2400  loss 2.650e-02
+step 3200  loss 2.542e-02
+test loss: 4.267e-02
 """
 
 import torch
