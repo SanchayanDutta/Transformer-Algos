@@ -21,14 +21,6 @@ token1. The gating vector [1, -1] ensures we add the update for token0 with
 one sign and token1 with another sign, matching the structure of the GDA step.
 By stacking N such layers, we effectively perform N approximate GDA steps.
 
-  1) Scores are computed by multiplying tokens with a query matrix Q and then 
-     interacting them again with the tokens.
-  2) Keys are obtained by multiplying tokens with a matrix P.
-  3) A mask limits the directional flow of information from token0 to token1.
-  4) A gating vector [1, -1] ensures that the first component remains the "old" 
-     state while the second component is updated with the correct sign structure, 
-     matching the (x, y) GDA update.
-
 By stacking N layers of this mechanism, we effectively perform N "approximate" GDA steps.
 
 Sample Output:
