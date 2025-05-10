@@ -16,6 +16,9 @@ INSIDE THE LAYER
   the sign gate flips one coordinate, and adding this to z reproduces 
   the exact GDA step T(z).
 
+A single-layer, two-token residual attention block uses learned matrices P and Q to form a quadratic dot-product score that scales a linear value projection, 
+multiplies the result by a fixed diagonal gate diag(+1,-1), and adds it back to the input, 
+creating a cubic residual map that closely imitates one-step gradient descent–ascent on the quadratic saddle game.
 """
 
 import torch
