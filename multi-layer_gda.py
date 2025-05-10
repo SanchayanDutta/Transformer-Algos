@@ -1,14 +1,25 @@
 """
 Mathematical Description:
+------------------
+We consider a two-variable function L(x, y) that we want to minimize w.r.t. x
+and maximize w.r.t. y:
+
+    L(x, y) = 0.5 * x^2 + x * y - 0.5 * y^2
+
+Thus:
+  dL/dx = x + y   and   dL/dy = x - y.
+
+A standard GDA step with step size η on (x, y) would be:
+  x_{k+1} = x_k - η * (x_k + y_k)     (Gradient Descent for x)
+  y_{k+1} = y_k + η * (x_k - y_k)     (Gradient Ascent for y)
+
+Transformer-Like Updates:
 -------------------------
-Consider two variables (x, y) ∈ ℝ². One step of classical GDA, with step size η > 0, 
-updates (x, y) as follows:
-
-  x_{k+1} = x_k - η (x_k +  y_k)
-  y_{k+1} = y_k + η (x_k  - y_k)
-
-We represent these two variables as two tokens, token0 and token1, each in ℝ². 
-At each layer, a linear attention mechanism is applied:
+We represent (x, y) as two tokens (token0, token1), each in ℝ², and define a
+2-token "linear attention" that enforces a directional flow from token0 to
+token1. The gating vector [1, -1] ensures we add the update for token0 with
+one sign and token1 with another sign, matching the structure of the GDA step.
+By stacking N such layers, we effectively perform N approximate GDA steps.
 
   1) Scores are computed by multiplying tokens with a query matrix Q and then 
      interacting them again with the tokens.
