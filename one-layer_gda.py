@@ -16,6 +16,12 @@ INSIDE THE LAYER
   the sign gate flips one coordinate, and adding this to z reproduces 
   the exact GDA step T(z).
 
+The training objective is the mean squared error between the layer’s predicted update and the exact one-step GDA target for the second token:
+
+L = (1 / 2B) * sum from b = 1 to B of || ẑ₁^(b) - z₁*^(b) ||₂²
+
+This encourages P and Q to make Z + attention(Z) * diag(1, -1) match (x', y').
+
 DESCRIPTION
 -------------
 A single-layer, two-token residual attention block uses learned matrices P and Q to form a quadratic dot-product score that scales a linear value projection, 
