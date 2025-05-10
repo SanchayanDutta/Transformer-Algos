@@ -1,6 +1,4 @@
 """
-Mathematical Description:
-------------------
 We consider a two-variable function L(x, y) that we want to minimize w.r.t. x
 and maximize w.r.t. y:
 
