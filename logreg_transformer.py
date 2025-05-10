@@ -8,6 +8,19 @@
 
   which matches the logistic-regression solution from the context.  
 • No softmax, LayerNorm, or MLP.
+
+Sample Output
+---------------
+step    200  loss 0.6223
+step    400  loss 0.5905
+step    600  loss 0.5878
+step    800  loss 0.6052
+step   1000  loss 0.5526
+step   1200  loss 0.6074
+step   1400  loss 0.5716
+step   1600  loss 0.5928
+step   1800  loss 0.6191
+step   2000  loss 0.5170
 """
 
 from typing import Callable, Optional, Tuple
